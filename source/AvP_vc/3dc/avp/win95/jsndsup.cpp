@@ -110,7 +110,7 @@ LOADED_SOUND const * GetSound (char const * fname)
 {
 	if(!SoundSwitchedOn) return (0);
 
-	char * wavname = strrchr (fname, '\\');
+	const char * wavname = strrchr (fname, '\\');
 	
 	if (wavname)
 	{
@@ -134,7 +134,9 @@ LOADED_SOUND const * GetSound (char const * fname)
 	
 	LOADED_SOUND * ls = 0;
 
-	int perm_snum = find_permanent_game_sound (wavname);
+	char* chwavname = _strdup(wavname);
+	int perm_snum = find_permanent_game_sound (chwavname);
+	free(chwavname);
 	
 	if (perm_snum != -1)
 	{

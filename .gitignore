@@ -2,4 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/source/AvP_vc/.vs/AvP/v15
+/source/AvP_vc/.vs
+/source/AvP_vc/Debug
+/source/AvP_vc/Debug
+*.exe

@@ -56,7 +56,9 @@ Animation_Chunk::Animation_Chunk(Chunk_With_Children* parent,const char* data,si
 				
 				fl->Textures=new int[fl->NumFrames];
 				fl->UVCoords=new int[(2*ta->NumVerts)*fl->NumFrames];
-				for(int k=0;k<fl->NumFrames;k++)
+
+				int k;
+				for(k=0;k<fl->NumFrames;k++)
 				{
 					fl->Textures[k]=*((int*)data);
 					data+=4;
@@ -159,7 +161,8 @@ void Animation_Chunk::fill_data_block(char* data_start)
 			data_start+=4;
 			*(int*)data_start=fl->spare2;		
 			data_start+=4;
-			for(int k=0;k<fl->NumFrames;k++)
+			int k;
+			for(k=0;k<fl->NumFrames;k++)
 			{
 				*(int*)data_start=fl->Textures[k];		
 				data_start+=4;

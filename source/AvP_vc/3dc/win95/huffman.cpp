@@ -95,7 +95,8 @@ extern HuffmanPackage *HuffmanCompression(unsigned char *sourcePtr, int length)
 	strncpy(outpackage->Identifier,COMPRESSED_RIF_IDENTIFIER,8);
 	outpackage->CompressedDataSize = HuffEncodeBytes((int*)(outpackage+1), sourcePtr, length, EncodingTable);
     outpackage->UncompressedDataSize = length;
-    for (int n = 0; n < MAX_DEPTH; n++)  
+	int n;
+    for (n = 0; n < MAX_DEPTH; n++)  
 	{
     	outpackage->CodelengthCount[n] = Depths[n + 1];
 	}

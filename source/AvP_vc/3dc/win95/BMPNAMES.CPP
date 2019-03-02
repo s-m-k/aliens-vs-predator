@@ -131,32 +131,34 @@ Chunk_With_BMPs::Chunk_With_BMPs (Chunk_With_Children * parent, const char * con
 	
 	for (int i=0; i<num; i++)
 	{
-		int f,i,d1,d2,d3;
-	
-		f = *((int *)bdata);
-		bdata += 4;
-		i = *((int *)bdata);
-		bdata += 4;
-		d1 = *((int *)bdata);
-		bdata += 4;
-		d2 = *((int *)bdata);
-		bdata += 4;
-		d3 = *((int *)bdata);
-		bdata += 4;
-	
-		BMP_Name bn (bdata);
-		bdata += (4-strlen(bn.filename)%4) + strlen(bn.filename);
+		{
+			int f, i, d1, d2, d3;
 
-		bn.flags = (BMPN_Flags)f;
-		bn.index = i;
-		bn.version_num = d1 & BMPNAME_VERSION_NUM_MASK;
-		bn.enum_id = (int)((unsigned int)d1 >> BMPNAME_ENUMID_SHIFT);
-		bn.priority = d2;
-		bn.transparency_colour_union = d3;
-						
-		max_index = max (bn.index, max_index);
-	
-		bmps.add_entry (bn);
+			f = *((int *)bdata);
+			bdata += 4;
+			i = *((int *)bdata);
+			bdata += 4;
+			d1 = *((int *)bdata);
+			bdata += 4;
+			d2 = *((int *)bdata);
+			bdata += 4;
+			d3 = *((int *)bdata);
+			bdata += 4;
+
+			BMP_Name bn(bdata);
+			bdata += (4 - strlen(bn.filename) % 4) + strlen(bn.filename);
+
+			bn.flags = (BMPN_Flags)f;
+			bn.index = i;
+			bn.version_num = d1 & BMPNAME_VERSION_NUM_MASK;
+			bn.enum_id = (int)((unsigned int)d1 >> BMPNAME_ENUMID_SHIFT);
+			bn.priority = d2;
+			bn.transparency_colour_union = d3;
+
+			max_index = max(bn.index, max_index);
+
+			bmps.add_entry(bn);
+		}
 	}
 
 	if (ver_num)

@@ -543,7 +543,9 @@ class _base_HashTable
 		// correct chain, without having
 		// to create a copy of the data to
 		// be added on the stack
-		virtual Node * NewNode();
+		virtual Node * NewNode() {
+			return new Node;
+		}
 		// add, checking that an equivalent entry does not already exist
 		// triggering fail function if one does
 		void AddAsserted(Node *);
@@ -586,7 +588,9 @@ class _base_HashTable
 		
 	private:
 		// virtual functions for future expansion
-		virtual Node * NewNode(ARG_TYPE,Node *);
+		virtual Node * NewNode(ARG_TYPE _dataR, Node * _nextP) {
+			return new Node(_dataR, _nextP);
+		}
 		
 		unsigned nEntries;
 		unsigned tableSize;
@@ -808,18 +812,6 @@ void _base_HashTable<TYPE,ARG_TYPE,CMP_ARG_TYPE>::RemoveAsserted(CMP_ARG_TYPE _d
 		}
 	}
 	HT_FAIL("HTT: Tried to remove entry which was not contained in table");
-}
-
-template <class TYPE,class ARG_TYPE,class CMP_ARG_TYPE>
-_base_HashTable<TYPE,ARG_TYPE,CMP_ARG_TYPE>::Node * _base_HashTable<TYPE,ARG_TYPE,CMP_ARG_TYPE>::NewNode(ARG_TYPE _dataR,Node * _nextP)
-{
-	return new Node(_dataR,_nextP);
-}
-
-template <class TYPE,class ARG_TYPE,class CMP_ARG_TYPE>
-_base_HashTable<TYPE,ARG_TYPE,CMP_ARG_TYPE>::Node * _base_HashTable<TYPE,ARG_TYPE,CMP_ARG_TYPE>::NewNode()
-{
-	return new Node;
 }
 
 template <class TYPE,class ARG_TYPE,class CMP_ARG_TYPE>

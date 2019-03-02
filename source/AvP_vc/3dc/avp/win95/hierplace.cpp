@@ -270,7 +270,8 @@ void Placed_Hierarchy_Sequence_Chunk::fill_data_block(char* data)
 	*(int*)data=sound_list_size;
 	data+=4;
 
-	for(int i=0;i<sound_list_size;i++)
+	int i;
+	for(i=0;i<sound_list_size;i++)
 	{
 		*(Timed_Sound_Description*) data=sound_list[i];
 		data+=sizeof(Timed_Sound_Description);

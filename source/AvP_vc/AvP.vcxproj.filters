@@ -1,0 +1,1503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{fb573001-38d7-422a-8d4e-c0c204262d25}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{fec38863-2386-4700-bd59-54c3bab6b60f}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{370929b0-c111-45d2-a41d-8a7e014b875c}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3dc\Afont.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gadgets\ahudgadg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\AI_Sight.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\alt_tab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Animchnk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\animobs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Frontend\AvP_EnvInfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Frontend\AvP_Intro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Frontend\AvP_MenuData.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Frontend\AvP_MenuGfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Frontend\AvP_Menus.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Frontend\AvP_MP_Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Frontend\AvP_UserProfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Avpchunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\AvpReg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Avpview.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\awBmpLd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\awIffLd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\awPnmLd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\awTexLd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_agun.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_ais.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Bh_alien.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Bh_binsw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_cable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_corpse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_deathvol.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Bh_debri.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_dummy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_fan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_far.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Bh_fhug.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Bh_gener.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_ldoor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_lift.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_light.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Bh_lnksw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_ltfx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Bh_marin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_mission.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Bh_near.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_pargen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_plachier.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_plift.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Bh_pred.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_queen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_RubberDuck.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_selfdest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_snds.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_spcl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Bh_swdor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_track.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Bh_types.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_videoscreen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_waypt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\bh_weap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Bh_xeno.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\bink.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Bmpnames.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\BonusAbilities.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\cconvars.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\CD_player.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\CDTrackSelection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Cheat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\CheatModes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\chnkload.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Chnktexi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Chnktype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\chtcodes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Chunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Chunkpal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\comp_map.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Comp_shp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\consbind.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\consbtch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gadgets\conscmnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\ConsoleLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gadgets\conssym.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gadgets\consvar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\Coordstr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\shapes\Cube.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\d3_func.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\d3d_hud.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\d3d_render.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\Daemon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\davehook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\db.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Dd_func.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Ddplat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\deaths.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Debuglog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\decal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\DetailLevels.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Di_func.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\DirectPlay.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Dp_func.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\dplayext.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\DummyObjectChunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\dx_proj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Dxlog.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Dynamics.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Dynblock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\endianio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Enumchnk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Enumsch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Envchunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Equipmnt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\equiputl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\extents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\fail.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Ffread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Ffstdio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\fragchnk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\frustrum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gadgets\gadget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Game.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\game_statistics.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\gamecmds.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\gameflow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\gamevars.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\GammaControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gflwplat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Gsprchnk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\hierchnk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\hierplace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\HModel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Hud.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gadgets\hudgadg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\huffman.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\iff.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\iff_ILBM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\ILBM_ext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\indexfnt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\intro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Inventry.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\io.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\iofocus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\jsndsup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\Kshape.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Kzsort.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Langplat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Language.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Lighting.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\list_tem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\load_shp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\los.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Ltchunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\Map.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Maps.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\Maths.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\md5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\media.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\mem3dc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\Mem3dcpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\mempool.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\MessageHistory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Mishchnk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\missions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\modcmds.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\Module.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\Morph.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\MouseCentreing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\movement.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\mp_launch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\Mslhand.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Npcsetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Obchunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\Object.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Objsetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\OEChunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Our_mem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Paintball.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\particle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\PathChnk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Pcmenus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Pfarlocs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Pheromon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\plat_shp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Platsup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Player.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Pldghost.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Pldnet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\plspecfn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Pmove.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\progress_bar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Projload.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Psnd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Psndplat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Psndproj.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Pvisible.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\r2base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\r2pos666.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\reflist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\refobj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\rentrntq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gadgets\rootgadg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\savegame.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\scream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Scrshot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\scstring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\SecStats.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\sfx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\shpanim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Shpchunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\smacker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Sndchunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\sphere.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Sprchunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Strachnk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Stratdef.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\String.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\strtab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\strutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\system.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gadgets\t_ingadg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\Tables.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\tallfont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\targeting.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gadgets\teletype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Texio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gadgets\textexp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gadgets\textin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Toolchnk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\track.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\gadgets\trepgadg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\trig666.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Triggers.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Txioctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Usr_io.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\Vdb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\VideoModes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\Vision.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Vramtime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\Weapons.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\win_func.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\win_proj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\win95\winmain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\wpchunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\avp\support\wrapstr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3dc\win95\Zsp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3dc\win95\advwin32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\gadgets\ahudgadg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\AI_Sight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\alt_tab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Animchnk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\animobs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Frontend\AvP_EnvInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Frontend\AvP_MenuGfx.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Frontend\AvP_Menus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Frontend\AvP_MP_Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Frontend\AvP_UserProfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Avpchunk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\avpitems.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\avppages.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\AvpReg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Avpview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\aw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\awTexLd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\awTexLd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_agun.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_ais.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_alien.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_binsw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_cable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_corpse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_deathvol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_debri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_dummy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_fan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_far.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_fhug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_gener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_ldoor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_lift.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_lnksw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_ltfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_marin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_mission.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_near.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_paq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_pargen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_plachier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_plift.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_pred.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_queen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_RubberDuck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_selfdest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_snds.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_spcl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_swdor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_track.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_videoscreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_waypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\bh_weap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Bh_xeno.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\bink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\bink_Rad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Bmp2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Bmpnames.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\BonusAbilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\CD_player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\CDTrackSelection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Cheat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Chnkload.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Chnkload.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Chnktexi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Chnktype.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Chunk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Chunkpal.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\command.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Comp_shp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\consbind.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\consbtch.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\gadgets\conscmnd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\ConsoleLog.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\gadgets\conssym.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\gadgets\consvar.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\Coordstr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\d3_func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\d3d_hud.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\d3d_render.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\d3dmacs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\daemon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Database.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\datatype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\davehook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Db.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\dbdefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\dcontext.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Debuglog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Debuglog.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\decal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\DetailLevels.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Dp_func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\dp_Sprh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\dplayext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\DummyObjectChunk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Dxlog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Dynamics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Dynblock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Eax.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\endianio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Enumchnk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Enumsch.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Envchunk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Equates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Equipmnt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\equiputl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\expvar.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\extents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\fail.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Ffread.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Ffstdio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\fragchnk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\frustrum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\gadgets\gadget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\game_statistics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Gamedef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\gameflow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Gameplat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\GammaControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Gsprchnk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Hash_tem.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Heap_tem.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\hierchnk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\hierplace.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\hmodel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Hud_data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\HUD_layout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Hud_map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Huddefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\gadgets\hudgadg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Hudgfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\huffman.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Ia3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\iff.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\iff_ILBM.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\ILBM_ext.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\indexfnt.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Inline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\intro.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Inventry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\iofocus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\jsndsup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\Kshape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Kzsort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\langenum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Language.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Lighting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\list_tem.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\load_shp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\los.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Ltchunk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\ltfx_exp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Macro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\md5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\media.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\mempool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\menudefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\menugfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Mishchnk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\missions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Mmx_math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\modcmds.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\Mslhand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Multmenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Npcsetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Obchunk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\objedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Objsetup.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\OEChunk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Ourasert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\ourbool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Paintball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\particle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\PathChnk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Pcmenus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Pentime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Pfarlocs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Pheromon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\plat_shp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Pldghost.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Pldnet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Pmove.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\progress_bar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\projfont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Projload.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\projmenu.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\projtext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Psnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Psndplat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Psndproj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Pvisible.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\r2base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\r2pos666.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Rad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\rebitems.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\rebmenus.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\reflist.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\refobj.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\rentrntq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\gadgets\rootgadg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\savegame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\scream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Scrshot.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\scstring.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\sequnces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\sfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\ShowCmds.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\shpanim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Shpchunk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Smack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\smacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Smsopt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Sndchunk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\sphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Sprchunk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\statpane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Strachnk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Stratdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\String.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\strtab.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\strutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\System.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\gadgets\t_ingadg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\tallfont.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\targeting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\gadgets\teletype.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\gadgets\textexp.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\gadgets\textin.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Toolchnk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\track.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\gadgets\trepgadg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\trig666.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Triggers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Txioctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Usr_io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\VideoModes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Vision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\win95\Vmanpset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Vramtime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\Weapons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\wpchunk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\avp\support\wrapstr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Zmouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3dc\win95\Zsp.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dplobby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

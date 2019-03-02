@@ -97,9 +97,9 @@ extern WINSCALEXY ExtentXYSubWindow;
 }
 
 extern void KeyboardEntryQueue_Add(char c);
-extern IngameKeyboardInput_KeyDown(unsigned char key);
-extern IngameKeyboardInput_KeyUp(unsigned char key);
-extern IngameKeyboardInput_ClearBuffer(void);
+extern int IngameKeyboardInput_KeyDown(unsigned char key);
+extern int IngameKeyboardInput_KeyUp(unsigned char key);
+extern int IngameKeyboardInput_ClearBuffer(void);
 
 
 long FAR PASCAL WindowProc(HWND hWnd, UINT message, 

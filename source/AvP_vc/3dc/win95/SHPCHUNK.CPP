@@ -423,7 +423,8 @@ BOOL Shape_Chunk::assoc_with_object_list(File_Chunk *fc)
 	
 	for (LIF<char *> n(&(hdptr->object_names_store)); !n.done(); n.next())
 	{
-		for (LIF<Chunk *> l(&chlst); !l.done(); l.next())
+		LIF<Chunk *> l;
+		for (l = (&chlst); !l.done(); l.next())
 		{
 			ob = (Object_Chunk *)l();
 			if ( !strcmp(ob->object_data.o_name, n()) )
@@ -968,7 +969,9 @@ void Shape_Polygon_Chunk::fill_data_block(char * data_start)
 		*((int *) (data_start + i*36 + 4)) = poly_data[i].normal_index;
 		*((int *) (data_start + i*36 + 8)) = poly_data[i].flags;
 		*((int *) (data_start + i*36 + 12)) = poly_data[i].colour;
-		for (int j = 0; j<poly_data[i].num_verts; j++)
+		int j;
+
+		for (j = 0; j<poly_data[i].num_verts; j++)
 			*((int *) (data_start + i*36 + 16 + j*4)) = poly_data[i].vert_ind[j];
 		for (; j<5; j++)
 			*((int *) (data_start + i*36 + 16 + j*4)) = -1;
@@ -1129,7 +1132,7 @@ uv_data (NULL), num_uvs (*((int *) uvdata))
 	
 }
 
-Shape_UV_Coord_Chunk::output_chunk (HANDLE &hand)
+int Shape_UV_Coord_Chunk::output_chunk (HANDLE &hand)
 {
 	unsigned long junk;
 	BOOL ok;
@@ -1237,7 +1240,7 @@ tex_fns (), num_tex_fns (*((int *) tfndata))
 		
 }
 
-Shape_Texture_Filenames_Chunk::output_chunk (HANDLE &hand)
+int Shape_Texture_Filenames_Chunk::output_chunk (HANDLE &hand)
 {
 	unsigned long junk;
 	BOOL ok;
@@ -2287,8 +2290,8 @@ void Shape_Morphing_Data_Chunk::prepare_for_output()
 	
 	List<Chunk *> cl;
 	lookup_child("SUBSHAPE",cl);
-	
-	for (LIF<Chunk *> cli(&cl); !cli.done(); cli.next())
+	LIF<Chunk *> cli;
+	for (cli = LIF<Chunk *>(&cl); !cli.done(); cli.next())
 	{
 		max_id = max (max_id, ((Shape_Sub_Shape_Chunk *)cli())->get_header()->file_id_num);
 	}

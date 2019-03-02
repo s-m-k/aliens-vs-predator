@@ -66,7 +66,9 @@ BOOL IsFixedPalette(Chunk_With_Children * parent)
 	{
 		List<Chunk *> plist;
 		parent->lookup_child("PRSETPAL",plist);
-		for (LIF<Chunk *> plit(&plist); !plit.done(); plit.next())
+		LIF<Chunk *> plit;
+
+		for (plit = LIF<Chunk *>(&plist); !plit.done(); plit.next())
 		{
 			for (LIF<Preset_Palette> findconst(&((Preset_Palette_Chunk *)plit())->pplist); !findconst.done(); findconst.next())
 			{
@@ -291,7 +293,8 @@ Environment_TLT_Chunk::Environment_TLT_Chunk (Chunk_With_Children * parent, cons
 : Chunk (parent, "ENVTXLIT"), width (*((int*)(sdata))),
 	num_levels (*((int*)(sdata+4))), flags(*(int *)(sdata+28)), table (0), filename(0)
 {
-	for (int i=0; i<ChunkTLT_NumReserved; ++i) reserved[i] = *(int *)(sdata+8+(i<<2));
+	int i;
+	for (i=0; i<ChunkTLT_NumReserved; ++i) reserved[i] = *(int *)(sdata+8+(i<<2));
 
 	if (flags & ChunkTLTFlag_ExternalFile)
 	{
@@ -353,7 +356,8 @@ void Environment_TLT_Chunk::fill_data_block (char * data_start)
 	
 	data_start += 8;
 
-	for (int i=0; i < ChunkTLT_NumReserved ; ++i, data_start+=4)
+	int i;
+	for (i=0; i < ChunkTLT_NumReserved ; ++i, data_start+=4)
 		*((int *)data_start) = reserved[i];
 
 	*(int *)data_start = flags;
@@ -774,7 +778,8 @@ void RIF_Child_Chunk::CreateMD5Chunk(BMP_Flags const & rcbmp, int const * md5id)
 RIF_Child_Chunk::RIF_Child_Chunk (Chunk_With_Children * const parent, const char * sdata, size_t const /*ssize*/)
 : Chunk(parent,"RIFCHILD"), egm_parent((Environment_Game_Mode_Chunk * const)parent)
 {
-	for (int i=0; i<ChunkRIFChild_NumReserved; i++, sdata+=4)
+	int i;
+	for (i=0; i<ChunkRIFChild_NumReserved; i++, sdata+=4)
 	{
 		reserved[i] = *((int *) sdata);
 	}
@@ -912,7 +917,8 @@ Coloured_Polygons_Lookup_Chunk::Coloured_Polygons_Lookup_Chunk (Chunk_With_Child
 : Chunk (parent, "CLRLOOKP"), flags (*((int*)(sdata))),
 	filename(0), table (0)
 {
-	for (int i=0; i<ChunkCPLU_NumReserved; ++i) reserved[i] = *(int *)(sdata+4+(i<<2));
+	int i;
+	for (i=0; i<ChunkCPLU_NumReserved; ++i) reserved[i] = *(int *)(sdata+4+(i<<2));
 
 	if (flags & ChunkCPLUFlag_ExternalFile)
 	{
@@ -973,7 +979,8 @@ void Coloured_Polygons_Lookup_Chunk::fill_data_block (char * data_start)
 	
 	data_start += 4;
 
-	for (int i=0; i < ChunkCPLU_NumReserved ; ++i, data_start+=4)
+	int i;
+	for (i=0; i < ChunkCPLU_NumReserved ; ++i, data_start+=4)
 		*((int *)data_start) = reserved[i];
 
 	if (flags & ChunkCPLUFlag_ExternalFile)

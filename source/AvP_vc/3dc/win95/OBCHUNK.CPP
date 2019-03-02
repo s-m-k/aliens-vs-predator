@@ -227,8 +227,9 @@ BOOL Object_Chunk::assoc_with_shape_no(File_Chunk *fc)
 
 	List<Chunk *> chlst;
 	fc->lookup_child("REBSHAPE",chlst);
+	LIF<Chunk *> l;
 	
-	for (LIF<Chunk *> l(&chlst); !l.done(); l.next())
+	for (l = LIF<Chunk *>(&chlst); !l.done(); l.next())
 	{
 		shp = (Shape_Chunk *)l();
 		shphd = shp->get_header();
@@ -1241,7 +1242,8 @@ Object_Track_Chunk2::Object_Track_Chunk2 (Chunk_With_Children * parent,const cha
 	else
 		sections=0;
 
-	for(int i=0;i<num_sections;i++)
+	int i;
+	for(i=0;i<num_sections;i++)
 	{
 		sections[i]=*(ChunkTrackSection*)data;
 		data+=sizeof(ChunkTrackSection);

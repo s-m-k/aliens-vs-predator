@@ -574,7 +574,7 @@ namespace RebMenus
 
 			~SelectionList();
 
-			AddSelection
+			void AddSelection
 			(
 				Selectable Sel_ToAdd
 			)

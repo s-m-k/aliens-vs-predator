@@ -310,7 +310,9 @@ Object_Hierarchy_Alternate_Shape_Set_Chunk::Object_Hierarchy_Alternate_Shape_Set
 	int num_shapes=*(int*)data;
 	data+=4;
 
-	for(int i=0;i<num_shapes;i++)
+	int i;
+
+	for(i=0;i<num_shapes;i++)
 	{
 		Replaced_Shape_Details* rsd=new Replaced_Shape_Details;
 		

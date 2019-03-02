@@ -118,9 +118,9 @@ static unsigned char LastFramesKeyboardInput[MAX_NUMBER_OF_INPUT_KEYS];
 extern int NormalFrameTime;
 
 static char IngameKeyboardInput[256];
-extern IngameKeyboardInput_KeyDown(unsigned char key);
-extern IngameKeyboardInput_KeyUp(unsigned char key);
-extern IngameKeyboardInput_ClearBuffer(void);
+extern int IngameKeyboardInput_KeyDown(unsigned char key);
+extern int IngameKeyboardInput_KeyUp(unsigned char key);
+extern int IngameKeyboardInput_ClearBuffer(void);
 
 /*
 
@@ -133,7 +133,7 @@ BOOL InitialiseDirectInput(void)
 
 {
     // try to create di object
-    if (DirectInputCreate(hInst, DIRECTINPUT_VERSION, &lpdi, NULL) != DI_OK)
+    if (DirectInput8Create(hInst, DIRECTINPUT_VERSION, IID_IDirectInput8, (LPVOID*)(&lpdi), NULL) != DI_OK)
       {
 	   #if debug
 	   ReleaseDirect3D();
@@ -1317,17 +1317,19 @@ BOOL CALLBACK EnumJoysticksCallback( LPCDIDEVICEINSTANCE pInst,
 #endif
 
 
-extern IngameKeyboardInput_KeyDown(unsigned char key)
+extern int IngameKeyboardInput_KeyDown(unsigned char key)
 {
 	IngameKeyboardInput[key] = 1;
+	return 0;
 }
 
-extern IngameKeyboardInput_KeyUp(unsigned char key)
+extern int IngameKeyboardInput_KeyUp(unsigned char key)
 {
 	IngameKeyboardInput[key] = 0;
+	return 0;
 }
 
-extern IngameKeyboardInput_ClearBuffer(void)
+extern int IngameKeyboardInput_ClearBuffer(void)
 {
 	int i;
 
@@ -1335,6 +1337,8 @@ extern IngameKeyboardInput_ClearBuffer(void)
 	{
 		IngameKeyboardInput[i] = 0;
 	}
+
+	return 0;
 }
 
 // For extern "C"

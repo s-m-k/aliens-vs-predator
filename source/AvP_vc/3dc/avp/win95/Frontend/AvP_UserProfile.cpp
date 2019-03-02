@@ -206,15 +206,15 @@ static int LoadUserProfiles(void)
 
 	// get any path in the load_name
 	int nPathLen = 0;
-	char * pColon = strrchr(load_name,':');
+	const char * pColon = strrchr(load_name,':');
 	if (pColon) nPathLen = pColon - load_name + 1;
-	char * pBackSlash = strrchr(load_name,'\\');
+	const char * pBackSlash = strrchr(load_name,'\\');
 	if (pBackSlash)
 	{
 		int nLen = pBackSlash - load_name + 1;
 		if (nLen > nPathLen) nPathLen = nLen;
 	}
-	char * pSlash = strrchr(load_name,'/');
+	const char * pSlash = strrchr(load_name,'/');
 	if (pSlash)
 	{
 		int nLen = pSlash - load_name + 1;

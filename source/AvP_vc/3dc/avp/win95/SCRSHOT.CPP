@@ -101,7 +101,8 @@ void ScreenShot()
 	strcpy(Name,"AVP");
 	int length=strlen(Name);
 	strncpy(&Name[length],"00.bmp",8);
-	for(int i=0;i<100;i++)
+	int i;
+	for(i=0;i<100;i++)
 	{
 		Name[length]=i/10+'0';
 		Name[length+1]=(i%10)+'0';

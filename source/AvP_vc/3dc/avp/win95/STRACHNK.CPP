@@ -737,8 +737,9 @@ void LiftStrategy::fill_data_block(char* data)
 	
 
 	(*(int*)data)=NumAssocLifts;
+	int i;
 	data+=4;
-	for(int i=0;i<NumAssocLifts;i++)
+	for(i=0;i<NumAssocLifts;i++)
 	{
 		*(ObjectID*)data=AssocLifts[i];
 		data+=8;
@@ -1138,7 +1139,8 @@ void MultiSwitchStrategy::fill_data_block(char* data)
 
 	*(int*)data=NumTargets;
 	data+=4;
-	for(int i=0;i<NumTargets;i++)
+	int i;
+	for(i=0;i<NumTargets;i++)
 	{
 		*(SwitchTarget*)data=Targets[i];
 		data+=sizeof(SwitchTarget);
@@ -1442,7 +1444,8 @@ void MissionObjectiveStrategy::fill_data_block(char* data)
 
 	*(int*)data=num_mission_targets;
 	data+=4;
-	for(int i=0;i<num_mission_targets;i++)
+	int i;
+	for(i=0;i<num_mission_targets;i++)
 	{
 		*(MissionMessage*)data=mission_targets[i];
 		data+=sizeof(MissionMessage);
@@ -1451,7 +1454,7 @@ void MissionObjectiveStrategy::fill_data_block(char* data)
 	
 	*(int*)data=num_request_targets;
 	data+=4;
-	for(	i=0;i<num_request_targets;i++)
+	for(i=0;i<num_request_targets;i++)
 	{
 		*(RequestTarget*)data=request_targets[i];
 		data+=sizeof(RequestTarget);

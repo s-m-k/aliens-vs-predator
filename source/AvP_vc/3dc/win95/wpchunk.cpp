@@ -114,7 +114,9 @@ Module_Waypoint_Chunk::Module_Waypoint_Chunk(Chunk_With_Children* parent,const c
 	if(NumWaypoints)
 	{
 		int first_ground_waypoint=-1;
-		for(int i=0;i<NumWaypoints;i++)
+		int i, j;
+
+		for(i=0;i<NumWaypoints;i++)
 		{
 			ChunkWaypoint* cw=&Waypoints[i];
 			cw->index=i;
@@ -242,7 +244,9 @@ void Module_Waypoint_Chunk::fill_data_block(char* data_start)
 	*(int*)data_start=NumWaypoints;
 	data_start+=4;
 
-	for(int i=0;i<NumWaypoints;i++)
+	int i, j;
+
+	for(i=0;i<NumWaypoints;i++)
 	{
 		ChunkWaypoint* cw=&Waypoints[i];
 
@@ -301,7 +305,8 @@ void Module_Waypoint_Chunk::TransferWaypointData(Module_Waypoint_Chunk* mwc_from
 	{
 		ChunkWaypoint* new_wp=new ChunkWaypoint[NumWaypoints+mwc_from->NumWaypoints];
 		//first take alien waypoints from this chunk
-		for(int i=0;i<NumAlienWaypoints;i++)
+		int i;
+		for(i=0;i<NumAlienWaypoints;i++)
 		{
 			new_wp[i]=AlienWaypoints[i];
 			//set pointers to zero so the memory doesn't get deallocated when the old

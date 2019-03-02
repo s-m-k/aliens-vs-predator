@@ -286,7 +286,8 @@ void InitNPCs(RIFFHANDLE h)
 	
 	// build list of objects for the npcs in this level
 
-	for(int i=0;i<HNPC_Last;i++)
+	int i;
+	for(i=0;i<HNPC_Last;i++)
 	{
 		Load_HNPC[i]=FALSE;
 	}

@@ -644,7 +644,8 @@ void File_Chunk::post_input_processing()
 		child_lists.delete_first_entry();
 	}
 
-	for (LIF<Shape_Chunk *> sli(&shplist); !sli.done(); sli.next())
+	LIF<Shape_Chunk *> sli;
+	for (sli = LIF<Shape_Chunk *>(&shplist); !sli.done(); sli.next())
 	{
 		Shape_Chunk::max_id = max (Shape_Chunk::max_id,sli()->get_header()->file_id_num);	
 	}

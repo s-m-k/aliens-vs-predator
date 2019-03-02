@@ -746,7 +746,8 @@ void InitOptionsMenu(void)
 	
 	// find the direct 3d driver we'll be using
 	d3d.CurrentDriver = 0;
-	for (int i = 0; i < d3d.NumDrivers; ++i)
+	int i;
+	for (i = 0; i < d3d.NumDrivers; ++i)
 	{
 		if (d3d.Driver[i].Hardware && hw_now_avail)
 		{

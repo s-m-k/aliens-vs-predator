@@ -27,7 +27,8 @@ extern "C"
 
 void EmptyCDTrackList()
 {
-	for(int i=0;i<AVP_ENVIRONMENT_END_OF_LIST;i++)
+	int i;
+	for(i=0;i<AVP_ENVIRONMENT_END_OF_LIST;i++)
 	{
 		while(LevelCDTracks[i].size()) LevelCDTracks[i].delete_first_entry();
 	}
@@ -134,7 +135,8 @@ void LoadCDTrackList()
 
 
 	//first extract the multiplayer tracks
-	for(int i=0;i<3;i++)
+	int i;
+	for(i=0;i<3;i++)
 	{
 		ExtractTracksForLevel(bufferptr,MultiplayerCDTracks[i]);
 	}
