@@ -5,4 +5,5 @@
 /source/AvP_vc/.vs
 /source/AvP_vc/Debug
 /source/AvP_vc/Debug
-*.exe
+/source/AvP_vc/out/Debug
+/source/AvP_vc/out/Release

@@ -1,0 +1,11 @@
+AwSetDDObject(0A42DB50) called.
+	Compiled with DirectDraw Version 7.0
+ATOnAppReactivate() called
+ATOnAppReactivate() returning
+Number of HW buffers 1
+Number of HW 3D buffers 0
+Number of HW buffers 1
+Number of HW 3D buffers 0
+No voice management. Support cccccccc
+No EAX support. Support cccccccc
+Releasing the property set.
