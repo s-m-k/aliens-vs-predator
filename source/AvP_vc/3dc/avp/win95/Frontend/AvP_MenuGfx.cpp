@@ -469,7 +469,7 @@ extern void RenderKeyConfigRectangle(int alpha)
 
 	y=y1;
 	{
-		unsigned short *destPtr = (unsigned short *)(ScreenBuffer + x1*2 + y*BackBufferPitch);
+		unsigned int *destPtr = (unsigned int *)(ScreenBuffer + x1*4 + y*BackBufferPitch);
 
 		for (x=x1; x<=x2; x++)
 		{
@@ -479,7 +479,7 @@ extern void RenderKeyConfigRectangle(int alpha)
 	}
 	y=y2;
 	{
-		unsigned short *destPtr = (unsigned short *)(ScreenBuffer + x1*2 + y*BackBufferPitch);
+		unsigned int *destPtr = (unsigned int *)(ScreenBuffer + x1*4 + y*BackBufferPitch);
 
 		for (x=x1; x<=x2; x++)
 		{
@@ -491,7 +491,7 @@ extern void RenderKeyConfigRectangle(int alpha)
 
 		for (y=y1+1; y<y2; y++)
 		{
-			unsigned short *destPtr = (unsigned short *)(ScreenBuffer + x1*2 + y*BackBufferPitch);
+			unsigned int *destPtr = (unsigned int *)(ScreenBuffer + x1*4 + y*BackBufferPitch);
 			*destPtr |= c;
 		}
 	}
@@ -499,7 +499,7 @@ extern void RenderKeyConfigRectangle(int alpha)
 
 		for (y=y1+1; y<y2; y++)
 		{
-			unsigned short *destPtr = (unsigned short *)(ScreenBuffer + x2*2 + y*BackBufferPitch);
+			unsigned int *destPtr = (unsigned int *)(ScreenBuffer + x2*4 + y*BackBufferPitch);
 			*destPtr |= c;
 		}
 	}
@@ -533,7 +533,7 @@ extern void RenderHighlightRectangle(int x1,int y1,int x2,int y2, int r, int g, 
 	c |= ((DisplayPixelFormat.dwBBitMask*b)/256)&(DisplayPixelFormat.dwBBitMask);
 	for (y=y1; y<=y2; y++)
 	{
-		unsigned short *destPtr = (unsigned short *)(ScreenBuffer + x1*2 + y*BackBufferPitch);
+		unsigned int *destPtr = (unsigned int *)(ScreenBuffer + x1*4 + y*BackBufferPitch);
 
 		for (x=x1; x<=x2; x++)
 		{
@@ -546,8 +546,8 @@ extern void RenderHighlightRectangle(int x1,int y1,int x2,int y2, int r, int g, 
 static int RenderSmallFontString(char *textPtr,int sx,int sy,int alpha, int red, int green, int blue)
 {
 	DDSURFACEDESC ddsdimage;
-   	unsigned short *destPtr;
-	unsigned short *srcPtr;
+   	unsigned int *destPtr;
+	unsigned int *srcPtr;
 	int extra = 0;
 	int alphaR = MUL_FIXED(alpha,red);
 	int alphaG = MUL_FIXED(alpha,green);
@@ -575,13 +575,13 @@ static int RenderSmallFontString(char *textPtr,int sx,int sy,int alpha, int red,
 			int topLeftU = 1+((c-32)&15)*16;
 			int topLeftV = 1+((c-32)>>4)*16;
 
-			srcPtr = (unsigned short *)(ddsdimage.lpSurface) + (topLeftU)+(topLeftV*ddsdimage.lPitch/2);
+			srcPtr = (unsigned int *)(ddsdimage.lpSurface) + (topLeftU)+(topLeftV*ddsdimage.lPitch/4);
 			
 			int x,y;
 
 			for (y=sy; y<HUD_FONT_HEIGHT+sy; y++)
 			{
-				destPtr = (unsigned short *)(ScreenBuffer + sx*2 + y*BackBufferPitch);
+				destPtr = (unsigned int *)(ScreenBuffer + sx*4 + y*BackBufferPitch);
 
 				for (x=0; x<HUD_FONT_WIDTH; x++)
 				{
@@ -610,12 +610,12 @@ static int RenderSmallFontString(char *textPtr,int sx,int sy,int alpha, int red,
 						if (destB>DisplayPixelFormat.dwBBitMask) destB = DisplayPixelFormat.dwBBitMask;
 						else destB &= DisplayPixelFormat.dwBBitMask;
 
-						*destPtr = (short)(destR|destG|destB);
+						*destPtr = (int)(destR|destG|destB);
 					}
 					destPtr++;
 					srcPtr++;
 				}
-				srcPtr += (ddsdimage.lPitch/2) - HUD_FONT_WIDTH; 
+				srcPtr += (ddsdimage.lPitch/4) - HUD_FONT_WIDTH; 
 			}
 			sx += AAFontWidths[c];
 			#if 0
@@ -640,8 +640,8 @@ static int RenderSmallFontString(char *textPtr,int sx,int sy,int alpha, int red,
 extern void RenderSmallFontString_Wrapped(char *textPtr,RECT* area,int alpha,int* output_x,int* output_y)
 {
 	DDSURFACEDESC ddsdimage;
-   	unsigned short *destPtr;
-	unsigned short *srcPtr;
+   	unsigned int *destPtr;
+	unsigned int *srcPtr;
 	int extra = 0;
 	AVPMENUGFX *gfxPtr;
 	LPDIRECTDRAWSURFACE surface;
@@ -839,13 +839,13 @@ extern void RenderSmallFontString_Wrapped(char *textPtr,RECT* area,int alpha,int
 				int topLeftU = 1+((c-32)&15)*16;
 				int topLeftV = 1+((c-32)>>4)*16;
 
-				srcPtr = (unsigned short *)(ddsdimage.lpSurface) + (topLeftU)+(topLeftV*ddsdimage.lPitch/2);
+				srcPtr = (unsigned int *)(ddsdimage.lpSurface) + (topLeftU)+(topLeftV*ddsdimage.lPitch/4);
 				
 				int x,y;
 
 				for (y=sy; y<HUD_FONT_HEIGHT+sy; y++)
 				{
-					destPtr = (unsigned short *)(ScreenBuffer + sx*2 + y*BackBufferPitch);
+					destPtr = (unsigned int *)(ScreenBuffer + sx*4 + y*BackBufferPitch);
 
 					for (x=0; x<HUD_FONT_WIDTH; x++)
 					{
@@ -874,12 +874,12 @@ extern void RenderSmallFontString_Wrapped(char *textPtr,RECT* area,int alpha,int
 							if (destB>DisplayPixelFormat.dwBBitMask) destB = DisplayPixelFormat.dwBBitMask;
 							else destB &= DisplayPixelFormat.dwBBitMask;
 
-							*destPtr = (short)(destR|destG|destB);
+							*destPtr = (int)(destR|destG|destB);
 						}
 						destPtr++;
 						srcPtr++;
 					}
-					srcPtr += (ddsdimage.lPitch/2) - HUD_FONT_WIDTH; 
+					srcPtr += (ddsdimage.lPitch/4) - HUD_FONT_WIDTH; 
 				}
 				sx += AAFontWidths[c];
 				#if 0
@@ -1036,7 +1036,7 @@ extern void LoadAllAvPMenuGfx(void)
 //					CloudTable[x][y]=b;
 					srcPtr++;
 				}
-				srcPtr += (ddsdimage.lPitch/2) - gfxPtr->Width; 
+				srcPtr += (ddsdimage.lPitch/4) - gfxPtr->Width; 
 			}
 		}
    	
@@ -1080,8 +1080,8 @@ extern void DrawAvPMenuGfx(enum AVPMENUGFX_ID menuGfxID, int topleftX, int tople
 	LockSurfaceAndGetBufferPointer();
 
 	DDSURFACEDESC ddsdimage;
-   	unsigned short *destPtr;
-	unsigned short *srcPtr;
+   	unsigned int *destPtr;
+	unsigned int *srcPtr;
 	AVPMENUGFX *gfxPtr;
 	LPDIRECTDRAWSURFACE surface;
 
@@ -1118,7 +1118,7 @@ extern void DrawAvPMenuGfx(enum AVPMENUGFX_ID menuGfxID, int topleftX, int tople
 	/* lock the image */
 	while (surface->Lock(NULL, &ddsdimage, DDLOCK_WAIT, NULL) == DDERR_WASSTILLDRAWING);
 
-	srcPtr = (unsigned short *)ddsdimage.lpSurface;
+	srcPtr = (unsigned int *)ddsdimage.lpSurface;
 	int length = gfxPtr->Width;
 
 	if (ScreenDescriptorBlock.SDB_Width - topleftX < length)
@@ -1133,7 +1133,7 @@ extern void DrawAvPMenuGfx(enum AVPMENUGFX_ID menuGfxID, int topleftX, int tople
 
 		for (y=topleftY; y<gfxPtr->Height+topleftY; y++)
 		{
-			destPtr = (unsigned short *)(ScreenBuffer + topleftX*2 + y*BackBufferPitch);
+			destPtr = (unsigned int *)(ScreenBuffer + topleftX*4 + y*BackBufferPitch);
 
 			for (x=0; x<length; x++)
 			{
@@ -1141,7 +1141,7 @@ extern void DrawAvPMenuGfx(enum AVPMENUGFX_ID menuGfxID, int topleftX, int tople
 				destPtr++;
 				srcPtr++;
 			}
-			srcPtr += (ddsdimage.lPitch/2) - length; 
+			srcPtr += (ddsdimage.lPitch/4) - length; 
 		}
 	}
 	else
@@ -1150,7 +1150,7 @@ extern void DrawAvPMenuGfx(enum AVPMENUGFX_ID menuGfxID, int topleftX, int tople
 
 		for (y=topleftY; y<gfxPtr->Height+topleftY; y++)
 		{
-			destPtr = (unsigned short *)(ScreenBuffer + topleftX*2 + y*BackBufferPitch);
+			destPtr = (unsigned int *)(ScreenBuffer + topleftX*4 + y*BackBufferPitch);
 
 			for (x=0; x<length; x++)
 			{
@@ -1179,12 +1179,12 @@ extern void DrawAvPMenuGfx(enum AVPMENUGFX_ID menuGfxID, int topleftX, int tople
 					if (destB>DisplayPixelFormat.dwBBitMask) destB = DisplayPixelFormat.dwBBitMask;
 					else destB &= DisplayPixelFormat.dwBBitMask;
 
-					*destPtr = (short)(destR|destG|destB);
+					*destPtr = (int)(destR|destG|destB);
 				}
 				destPtr++;
 				srcPtr++;
 			}
-			srcPtr += (ddsdimage.lPitch/2) - length; 
+			srcPtr += (ddsdimage.lPitch/4) - length; 
 		}
 	}
    	
@@ -1198,8 +1198,8 @@ extern void DrawAvPMenuGlowyBar(int topleftX, int topleftY, int alpha, int lengt
 	LockSurfaceAndGetBufferPointer();
 
 	DDSURFACEDESC ddsdimage;
-   	unsigned short *destPtr;
-	unsigned short *srcPtr;
+   	unsigned int *destPtr;
+	unsigned int *srcPtr;
 	AVPMENUGFX *gfxPtr;
 	LPDIRECTDRAWSURFACE surface;
 
@@ -1214,7 +1214,7 @@ extern void DrawAvPMenuGlowyBar(int topleftX, int topleftY, int alpha, int lengt
 	/* lock the image */
 	while (surface->Lock(NULL, &ddsdimage, DDLOCK_WAIT, NULL) == DDERR_WASSTILLDRAWING);
 
-	srcPtr = (unsigned short *)ddsdimage.lpSurface;
+	srcPtr = (unsigned int *)ddsdimage.lpSurface;
 
 	if (ScreenDescriptorBlock.SDB_Width - topleftX < length)
 	{
@@ -1229,14 +1229,14 @@ extern void DrawAvPMenuGlowyBar(int topleftX, int topleftY, int alpha, int lengt
 
 		for (y=topleftY; y<gfxPtr->Height+topleftY; y++)
 		{
-			destPtr = (unsigned short *)(ScreenBuffer + topleftX*2 + y*BackBufferPitch);
+			destPtr = (unsigned int *)(ScreenBuffer + topleftX*4 + y*BackBufferPitch);
 
 			for (x=0; x<length; x++)
 			{
 				*destPtr = *srcPtr;
 				destPtr++;
 			}
-			srcPtr += (ddsdimage.lPitch/2); 
+			srcPtr += (ddsdimage.lPitch/4); 
 		}
 	}
 	else
@@ -1245,7 +1245,7 @@ extern void DrawAvPMenuGlowyBar(int topleftX, int topleftY, int alpha, int lengt
 
 		for (y=topleftY; y<gfxPtr->Height+topleftY; y++)
 		{
-			destPtr = (unsigned short *)(ScreenBuffer + topleftX*2 + y*BackBufferPitch);
+			destPtr = (unsigned int *)(ScreenBuffer + topleftX*4 + y*BackBufferPitch);
 
 			for (x=0; x<length; x++)
 			{
@@ -1274,11 +1274,11 @@ extern void DrawAvPMenuGlowyBar(int topleftX, int topleftY, int alpha, int lengt
 					if (destB>DisplayPixelFormat.dwBBitMask) destB = DisplayPixelFormat.dwBBitMask;
 					else destB &= DisplayPixelFormat.dwBBitMask;
 
-					*destPtr = (short)(destR|destG|destB);
+					*destPtr = (int)(destR|destG|destB);
 				}
 				destPtr++;
 			}
-			srcPtr += (ddsdimage.lPitch/2); 
+			srcPtr += (ddsdimage.lPitch/4); 
 		}
 	}
    	
@@ -1292,8 +1292,8 @@ extern void DrawAvPMenuGlowyBar_Clipped(int topleftX, int topleftY, int alpha, i
 	LockSurfaceAndGetBufferPointer();
 
 	DDSURFACEDESC ddsdimage;
-   	unsigned short *destPtr;
-	unsigned short *srcPtr;
+   	unsigned int *destPtr;
+	unsigned int *srcPtr;
 	AVPMENUGFX *gfxPtr;
 	LPDIRECTDRAWSURFACE surface;
 
@@ -1308,7 +1308,7 @@ extern void DrawAvPMenuGlowyBar_Clipped(int topleftX, int topleftY, int alpha, i
 	/* lock the image */
 	while (surface->Lock(NULL, &ddsdimage, DDLOCK_WAIT, NULL) == DDERR_WASSTILLDRAWING);
 
-	srcPtr = (unsigned short *)ddsdimage.lpSurface;
+	srcPtr = (unsigned int *)ddsdimage.lpSurface;
 
 	if (length<0) length = 0;
 
@@ -1320,13 +1320,13 @@ extern void DrawAvPMenuGlowyBar_Clipped(int topleftX, int topleftY, int alpha, i
 		{
 			if(y>=topY && y<=bottomY)
 			{
-				destPtr = (unsigned short *)(ScreenBuffer + topleftX*2 + y*BackBufferPitch);
+				destPtr = (unsigned int *)(ScreenBuffer + topleftX*4 + y*BackBufferPitch);
 				for (x=0; x<length; x++)
 				{
 					*destPtr = *srcPtr;
 					destPtr++;
 				}
-				srcPtr += (ddsdimage.lPitch/2); 
+				srcPtr += (ddsdimage.lPitch/4); 
 			}
 		}
 	}
@@ -1338,7 +1338,7 @@ extern void DrawAvPMenuGlowyBar_Clipped(int topleftX, int topleftY, int alpha, i
 		{
 			if(y>=topY && y<=bottomY)
 			{
-				destPtr = (unsigned short *)(ScreenBuffer + topleftX*2 + y*BackBufferPitch);
+				destPtr = (unsigned int *)(ScreenBuffer + topleftX*4 + y*BackBufferPitch);
 
 				for (x=0; x<length; x++)
 				{
@@ -1367,12 +1367,12 @@ extern void DrawAvPMenuGlowyBar_Clipped(int topleftX, int topleftY, int alpha, i
 						if (destB>DisplayPixelFormat.dwBBitMask) destB = DisplayPixelFormat.dwBBitMask;
 						else destB &= DisplayPixelFormat.dwBBitMask;
 
-						*destPtr = (short)(destR|destG|destB);
+						*destPtr = (int)(destR|destG|destB);
 					}
 					destPtr++;
 				}
 			}
-			srcPtr += (ddsdimage.lPitch/2); 
+			srcPtr += (ddsdimage.lPitch/4); 
 		}
 	}
    	
@@ -1520,8 +1520,8 @@ extern void DrawAvPMenuGfx_Faded(enum AVPMENUGFX_ID menuGfxID, int topleftX, int
 	LockSurfaceAndGetBufferPointer();
 
 	DDSURFACEDESC ddsdimage;
-   	unsigned short *destPtr;
-	unsigned short *srcPtr;
+   	unsigned int *destPtr;
+	unsigned int *srcPtr;
 	AVPMENUGFX *gfxPtr;
 	LPDIRECTDRAWSURFACE surface;
 
@@ -1558,14 +1558,14 @@ extern void DrawAvPMenuGfx_Faded(enum AVPMENUGFX_ID menuGfxID, int topleftX, int
 	/* lock the image */
 	while (surface->Lock(NULL, &ddsdimage, DDLOCK_WAIT, NULL) == DDERR_WASSTILLDRAWING);
 
-	srcPtr = (unsigned short *)ddsdimage.lpSurface;
+	srcPtr = (unsigned int *)ddsdimage.lpSurface;
 
 	{
 		int x,y;
 
 		for (y=topleftY; y<gfxPtr->Height+topleftY; y++)
 		{
-			destPtr = (unsigned short *)(ScreenBuffer + topleftX*2 + y*BackBufferPitch);
+			destPtr = (unsigned int *)(ScreenBuffer + topleftX*4 + y*BackBufferPitch);
 
 			for (x=0; x<gfxPtr->Width; x++)
 			{
@@ -1585,7 +1585,7 @@ extern void DrawAvPMenuGfx_Faded(enum AVPMENUGFX_ID menuGfxID, int topleftX, int
 					srcB = MUL_FIXED(alpha,srcB);
 					srcB &= DisplayPixelFormat.dwBBitMask;
 
-					*destPtr = (short)(srcR|srcG|srcB);
+					*destPtr = (int)(srcR|srcG|srcB);
 				}
 				else
 				{
@@ -1595,7 +1595,7 @@ extern void DrawAvPMenuGfx_Faded(enum AVPMENUGFX_ID menuGfxID, int topleftX, int
 				destPtr++;
 				srcPtr++;
 			}
-			srcPtr += (ddsdimage.lPitch/2) - gfxPtr->Width; 
+			srcPtr += (ddsdimage.lPitch/4) - gfxPtr->Width; 
 		}
 	}
    	
@@ -1608,8 +1608,8 @@ extern void DrawAvPMenuGfx_Clipped(enum AVPMENUGFX_ID menuGfxID, int topleftX, i
 	LockSurfaceAndGetBufferPointer();
 
 	DDSURFACEDESC ddsdimage;
-   	unsigned short *destPtr;
-	unsigned short *srcPtr;
+   	unsigned int *destPtr;
+	unsigned int *srcPtr;
 	AVPMENUGFX *gfxPtr;
 	LPDIRECTDRAWSURFACE surface;
 
@@ -1646,7 +1646,7 @@ extern void DrawAvPMenuGfx_Clipped(enum AVPMENUGFX_ID menuGfxID, int topleftX, i
 	/* lock the image */
 	while (surface->Lock(NULL, &ddsdimage, DDLOCK_WAIT, NULL) == DDERR_WASSTILLDRAWING);
 
-	srcPtr = (unsigned short *)ddsdimage.lpSurface;
+	srcPtr = (unsigned int *)ddsdimage.lpSurface;
 
 	if (alpha>ONE_FIXED)
 	{
@@ -1654,7 +1654,7 @@ extern void DrawAvPMenuGfx_Clipped(enum AVPMENUGFX_ID menuGfxID, int topleftX, i
 
 		for (y=topleftY; y<gfxPtr->Height+topleftY; y++)
 		{
-			destPtr = (unsigned short *)(ScreenBuffer + topleftX*2 + y*BackBufferPitch);
+			destPtr = (unsigned int *)(ScreenBuffer + topleftX*4 + y*BackBufferPitch);
 			if(y>=topY && y<=bottomY)
 			{
 				for (x=0; x<gfxPtr->Width; x++)
@@ -1663,11 +1663,11 @@ extern void DrawAvPMenuGfx_Clipped(enum AVPMENUGFX_ID menuGfxID, int topleftX, i
 					destPtr++;
 					srcPtr++;
 				}
-				srcPtr += (ddsdimage.lPitch/2) - gfxPtr->Width; 
+				srcPtr += (ddsdimage.lPitch/4) - gfxPtr->Width; 
 			}
 			else
 			{
-				srcPtr+=(ddsdimage.lPitch/2);
+				srcPtr+=(ddsdimage.lPitch/4);
 			}
 		}
 	}
@@ -1677,7 +1677,7 @@ extern void DrawAvPMenuGfx_Clipped(enum AVPMENUGFX_ID menuGfxID, int topleftX, i
 
 		for (y=topleftY; y<gfxPtr->Height+topleftY; y++)
 		{
-			destPtr = (unsigned short *)(ScreenBuffer + topleftX*2 + y*BackBufferPitch);
+			destPtr = (unsigned int *)(ScreenBuffer + topleftX*4 + y*BackBufferPitch);
 
 			if(y>=topY && y<=bottomY)
 			{
@@ -1708,16 +1708,16 @@ extern void DrawAvPMenuGfx_Clipped(enum AVPMENUGFX_ID menuGfxID, int topleftX, i
 						if (destB>DisplayPixelFormat.dwBBitMask) destB = DisplayPixelFormat.dwBBitMask;
 						else destB &= DisplayPixelFormat.dwBBitMask;
 
-						*destPtr = (short)(destR|destG|destB);
+						*destPtr = (int)(destR|destG|destB);
 					}
 					destPtr++;
 					srcPtr++;
 				}
-				srcPtr += (ddsdimage.lPitch/2) - gfxPtr->Width; 
+				srcPtr += (ddsdimage.lPitch/4) - gfxPtr->Width; 
 			}
 			else
 			{
-				srcPtr += (ddsdimage.lPitch/2);
+				srcPtr += (ddsdimage.lPitch/4);
 			}
 		}
 	}
@@ -1760,7 +1760,7 @@ extern void FadedScreen(int alpha)
 
 		for (y=60; y<ScreenDescriptorBlock.SDB_Height-60; y++)
 		{
-			unsigned short *destPtr = (unsigned short *)(ScreenBuffer + y*BackBufferPitch);
+			unsigned int *destPtr = (unsigned int *)(ScreenBuffer + y*BackBufferPitch);
 
 			for (x=0; x<ScreenDescriptorBlock.SDB_Width; x++)
 			{
@@ -1780,7 +1780,7 @@ extern void FadedScreen(int alpha)
 					srcB = MUL_FIXED(alpha,srcB);
 					srcB &= DisplayPixelFormat.dwBBitMask;
 
-					*destPtr = (short)(srcR|srcG|srcB);
+					*destPtr = (int)(srcR|srcG|srcB);
 				}
 
 				destPtr++;

@@ -672,16 +672,16 @@ IndexedFont_Kerned_Column :: RenderChar_Clipped
 					long fontimagePitchInShorts = (ddsdimage.lPitch/2); 
 					long backbufferPitchInShorts = (BackBufferPitch/2); 
 
-					unsigned short* fontimageRowStartPtr =
+					unsigned int* fontimageRowStartPtr =
 					(
-						((unsigned short *)ddsdimage.lpSurface)
+						((unsigned int *)ddsdimage.lpSurface)
 						+
 						(GetHeight()*theOffset*fontimagePitchInShorts)
 					);
 
-					unsigned short* backbufferRowStartPtr =
+					unsigned int* backbufferRowStartPtr =
 					(
-						((unsigned short *)ScreenBuffer)
+						((unsigned int *)ScreenBuffer)
 						+
 						(R2Pos_Cursor.y*backbufferPitchInShorts)
 						+
@@ -691,8 +691,8 @@ IndexedFont_Kerned_Column :: RenderChar_Clipped
 
 					for (int yCount=GetHeight(); yCount>0; yCount--)
 					{
-						unsigned short* fontimagePtr = fontimageRowStartPtr;
-						unsigned short* backbufferPtr = backbufferRowStartPtr;
+						unsigned int* fontimagePtr = fontimageRowStartPtr;
+						unsigned int* backbufferPtr = backbufferRowStartPtr;
 
 						if (screenY >= R2Rect_Clip.y0 && screenY <= R2Rect_Clip.y1)
 						for (int xCount=FullWidthForOffset[theOffset]; xCount>0;xCount--)
@@ -724,7 +724,7 @@ IndexedFont_Kerned_Column :: RenderChar_Clipped
 								if (backB>DisplayPixelFormat.dwBBitMask) backB = DisplayPixelFormat.dwBBitMask;
 								else backB &= DisplayPixelFormat.dwBBitMask;
 
-								*backbufferPtr = (short)(backR|backG|backB);
+								*backbufferPtr = (int)(backR|backG|backB);
 							}
 							fontimagePtr++;
 							backbufferPtr++;

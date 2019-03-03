@@ -215,6 +215,7 @@ static const char* MultiplayerConfigurationName=0; //ditto
 
 extern int DebuggingCommandsActive;
 
+extern void RenderPixel(int x, int y, int r, int g, int b);
 extern int AvP_MainMenus(void)
 {
 	#if 0
@@ -312,6 +313,11 @@ extern int AvP_MainMenus(void)
 		ReadUserInput();
 		AvP_UpdateMenus();
    //	BezierCurve();
+		/*for (int y = 0; y < 480; y++) {
+			for (int x = 0; x < 640; x++) {
+				RenderPixel(x, y, x < 320 && y > 240 ? 255 : 0, x >= 320 && y > 240 ? 255 : 0, y <= 240 ? 255 : 0);
+			}
+		}*/
 		
 		ShowMenuFrameRate();
 
@@ -4959,14 +4965,14 @@ void RenderPixel(int x,int y,int r,int g,int b)
 	extern unsigned char *ScreenBuffer;
 	extern long BackBufferPitch;
 
-	unsigned short colour;
+	unsigned int colour;
 
 	colour  = MUL_FIXED(DisplayPixelFormat.dwRBitMask,r<<8) & DisplayPixelFormat.dwRBitMask;
 	colour |= MUL_FIXED(DisplayPixelFormat.dwGBitMask,g<<8) & DisplayPixelFormat.dwGBitMask;
 	colour |= MUL_FIXED(DisplayPixelFormat.dwBBitMask,b<<8) & DisplayPixelFormat.dwBBitMask;
 	
 	
-	*(unsigned short*) (ScreenBuffer + (x)*2 + (y)*BackBufferPitch)  = colour;
+	*(unsigned int*) (ScreenBuffer + (x)*4 + (y)*BackBufferPitch)  = colour;
 	
 }
 #if 0

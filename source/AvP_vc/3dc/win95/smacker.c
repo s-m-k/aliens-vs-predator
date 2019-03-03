@@ -95,7 +95,7 @@ static int NextSmackerFrame(Smack *smackHandle)
 
 	/* unpack frame */
 	extern DDPIXELFORMAT DisplayPixelFormat;
-	SmackToBuffer(smackHandle,(640-smackHandle->Width)/2,(480-smackHandle->Height)/2,640*2,480,(void*)ScreenBuffer,GetSmackerPixelFormat(&DisplayPixelFormat));
+	SmackToBuffer(smackHandle,(640-smackHandle->Width)/2,(480-smackHandle->Height)/2,640*4,480,(void*)ScreenBuffer,GetSmackerPixelFormat(&DisplayPixelFormat));
 	SmackDoFrame(smackHandle);
 
 	/* are we at the last frame yet? */

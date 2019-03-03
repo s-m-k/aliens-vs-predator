@@ -484,21 +484,21 @@ IndexedFont_Kerned :: RenderString_Clipped
 							// okay, now we have the surfaces, we can copy from one to the other,
 							// darkening pixels as we go
 							{
-								long fontimagePitchInShorts = (ddsdimage.lPitch/2); 
-								long backbufferPitchInShorts = (BackBufferPitch/2); 
+								long fontimagePitchInInts = (ddsdimage.lPitch/4); 
+								long backbufferPitchInInts = (BackBufferPitch/4); 
 
-								unsigned short* fontimageRowStartPtr =
+								unsigned int* fontimageRowStartPtr =
 								(
-									((unsigned short *)ddsdimage.lpSurface)
+									((unsigned int *)ddsdimage.lpSurface)
 									+
-									(GetHeight()*theOffset*fontimagePitchInShorts)
+									(GetHeight()*theOffset*fontimagePitchInInts)
 								);
 
-								unsigned short* backbufferRowStartPtr =
+								unsigned int* backbufferRowStartPtr =
 								(
-									((unsigned short *)ScreenBuffer)
+									((unsigned int *)ScreenBuffer)
 									+
-									(R2Pos_Cursor.y*backbufferPitchInShorts)
+									(R2Pos_Cursor.y*backbufferPitchInInts)
 									+
 									(R2Pos_Cursor.x)
 								);
@@ -506,8 +506,8 @@ IndexedFont_Kerned :: RenderString_Clipped
 
 								for (int yCount=GetHeight(); yCount>0; yCount--)
 								{
-									unsigned short* fontimagePtr = fontimageRowStartPtr;
-									unsigned short* backbufferPtr = backbufferRowStartPtr;
+									unsigned int* fontimagePtr = fontimageRowStartPtr;
+									unsigned int* backbufferPtr = backbufferRowStartPtr;
 
 									if (screenY >= R2Rect_Clip.y0 && screenY <= R2Rect_Clip.y1)
 									for (int xCount=width; xCount>0;xCount--)
@@ -539,14 +539,14 @@ IndexedFont_Kerned :: RenderString_Clipped
 											if (backB>DisplayPixelFormat.dwBBitMask) backB = DisplayPixelFormat.dwBBitMask;
 											else backB &= DisplayPixelFormat.dwBBitMask;
 
-											*backbufferPtr = (short)(backR|backG|backB);
+											*backbufferPtr = (int)(backR|backG|backB);
 										}
 										fontimagePtr++;
 										backbufferPtr++;
 									}
 									screenY++;
-									fontimageRowStartPtr += fontimagePitchInShorts;
-									backbufferRowStartPtr += backbufferPitchInShorts;
+									fontimageRowStartPtr += fontimagePitchInInts;
+									backbufferRowStartPtr += backbufferPitchInInts;
 								}
 							}
 						   	
@@ -648,19 +648,19 @@ IndexedFont_Kerned :: RenderString_Unclipped
 							// okay, now we have the surfaces, we can copy from one to the other,
 							// darkening pixels as we go
 							{
-								long fontimagePitchInShorts = (ddsdimage.lPitch/2); 
-								long backbufferPitchInShorts = (BackBufferPitch/2); 
+								long fontimagePitchInShorts = (ddsdimage.lPitch/4); 
+								long backbufferPitchInShorts = (BackBufferPitch/4); 
 
-								unsigned short* fontimageRowStartPtr =
+								unsigned int* fontimageRowStartPtr =
 								(
-									((unsigned short *)ddsdimage.lpSurface)
+									((unsigned int *)ddsdimage.lpSurface)
 									+
 									(GetHeight()*theOffset*fontimagePitchInShorts)
 								);
 
-								unsigned short* backbufferRowStartPtr =
+								unsigned int* backbufferRowStartPtr =
 								(
-									((unsigned short *)ScreenBuffer)
+									((unsigned int *)ScreenBuffer)
 									+
 									(R2Pos_Cursor.y*backbufferPitchInShorts)
 									+
@@ -670,8 +670,8 @@ IndexedFont_Kerned :: RenderString_Unclipped
 
 								for (int yCount=GetHeight(); yCount>0; yCount--)
 								{
-									unsigned short* fontimagePtr = fontimageRowStartPtr;
-									unsigned short* backbufferPtr = backbufferRowStartPtr;
+									unsigned int* fontimagePtr = fontimageRowStartPtr;
+									unsigned int* backbufferPtr = backbufferRowStartPtr;
 
 									int xIndex = R2Pos_Cursor.x+CloakingPhase/64;
 									int yIndex = (screenY+CloakingPhase/128)&127;
@@ -707,7 +707,7 @@ IndexedFont_Kerned :: RenderString_Unclipped
 											if (backB>DisplayPixelFormat.dwBBitMask) backB = DisplayPixelFormat.dwBBitMask;
 											else backB &= DisplayPixelFormat.dwBBitMask;
 
-											*backbufferPtr = (short)(backR|backG|backB);
+											*backbufferPtr = (int)(backR|backG|backB);
 										}
 										fontimagePtr++;
 										backbufferPtr++;

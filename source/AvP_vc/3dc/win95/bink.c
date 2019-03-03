@@ -63,7 +63,7 @@ static int NextBinkFrame(BINK *binkHandle)
 	/* unpack frame */
 	BinkDoFrame(binkHandle);
 
-	BinkCopyToBuffer(binkHandle,(void*)ScreenBuffer,640*2,480,(640-binkHandle->Width)/2,(480-binkHandle->Height)/2,BinkSurfaceType);
+	BinkCopyToBuffer(binkHandle,(void*)ScreenBuffer,640,480,(640-binkHandle->Width)/2,(480-binkHandle->Height)/2,BinkSurfaceType);
 
 	//BinkToBuffer(binkHandle,(640-binkHandle->Width)/2,(480-binkHandle->Height)/2,640*2,480,(void*)ScreenBuffer,GetBinkPixelFormat(&DisplayPixelFormat));
 
@@ -77,41 +77,41 @@ static int NextBinkFrame(BINK *binkHandle)
 
 static int GetBinkPixelFormat(void)
 {
-	if( (DisplayPixelFormat.dwFlags & DDPF_RGB) && !(DisplayPixelFormat.dwFlags & DDPF_PALETTEINDEXED8) )
+	if ((DisplayPixelFormat.dwFlags & DDPF_RGB) && !(DisplayPixelFormat.dwFlags & DDPF_PALETTEINDEXED8))
 	{
-	    int m;
-		int redShift=0;
-		int greenShift=0;
-		int blueShift=0;
+		int m;
+		int redShift = 0;
+		int greenShift = 0;
+		int blueShift = 0;
 
 		m = DisplayPixelFormat.dwRBitMask;
 		LOCALASSERT(m);
-		while(!(m&1)) m>>=1;
-		while(m&1)
+		while (!(m & 1)) m >>= 1;
+		while (m & 1)
 		{
-			m>>=1;
+			m >>= 1;
 			redShift++;
 		}
 
 		m = DisplayPixelFormat.dwGBitMask;
 		LOCALASSERT(m);
-		while(!(m&1)) m>>=1;
-		while(m&1)
+		while (!(m & 1)) m >>= 1;
+		while (m & 1)
 		{
-			m>>=1;
+			m >>= 1;
 			greenShift++;
 		}
 
 		m = DisplayPixelFormat.dwBBitMask;
 		LOCALASSERT(m);
-		while(!(m&1)) m>>=1;
-		while(m&1)
+		while (!(m & 1)) m >>= 1;
+		while (m & 1)
 		{
-			m>>=1;
+			m >>= 1;
 			blueShift++;
 		}
 
-		if(redShift == 5)
+		if (redShift == 5)
 		{
 			if (greenShift == 5)
 			{
@@ -161,7 +161,9 @@ static int GetBinkPixelFormat(void)
 				}
 			}
 		}
-		else
+		else if (redShift == 8 && greenShift == 8 && blueShift == 8) {
+			return BINKSURFACE32;
+		} else
 		{
 			return -1;
 		}
