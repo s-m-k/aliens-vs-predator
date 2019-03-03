@@ -1002,7 +1002,7 @@ extern void LoadAllAvPMenuGfx(void)
 	LoadMenuFont();	
 	{	
 		DDSURFACEDESC ddsdimage;
-		unsigned short *srcPtr;
+		unsigned int *srcPtr;
 		   
 		AVPMENUGFX *gfxPtr = &AvPMenuGfxStorage[AVPMENUGFX_CLOUDY];
 		LPDIRECTDRAWSURFACE surface;
@@ -1015,7 +1015,7 @@ extern void LoadAllAvPMenuGfx(void)
 		/* lock the image */
 		while (surface->Lock(NULL, &ddsdimage, DDLOCK_WAIT, NULL) == DDERR_WASSTILLDRAWING);
 
-		srcPtr = (unsigned short *)ddsdimage.lpSurface;
+		srcPtr = (unsigned int *)ddsdimage.lpSurface;
 
 		{
 			int x,y;

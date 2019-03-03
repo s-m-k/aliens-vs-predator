@@ -161,7 +161,7 @@ static int GetBinkPixelFormat(void)
 				}
 			}
 		}
-		else if (redShift == 8 && greenShift == 8 && blueShift == 8) {
+		else if (redShift == 8 && greenShift == 8 && blueShift == 8 && DisplayPixelFormat.dwAlphaBitDepth == 32) {
 			return BINKSURFACE32;
 		} else
 		{
@@ -193,7 +193,7 @@ extern int PlayMenuBackgroundBink(void)
 
 	if(newframe) BinkDoFrame(MenuBackground);
 
-	BinkCopyToBuffer(MenuBackground,(void*)ScreenBuffer,640*2,480,(640-MenuBackground->Width)/2,(480-MenuBackground->Height)/2,BinkSurfaceType|BINKSURFACECOPYALL);
+	BinkCopyToBuffer(MenuBackground,(void*)ScreenBuffer,640 * 2,480,(640-MenuBackground->Width)/2,(480-MenuBackground->Height)/2,BinkSurfaceType|BINKSURFACECOPYALL);
 
 	/* next frame, please */								  
 	if(newframe)BinkNextFrame(MenuBackground);

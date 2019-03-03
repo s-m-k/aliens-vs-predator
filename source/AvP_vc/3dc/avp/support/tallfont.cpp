@@ -602,8 +602,8 @@ IndexedFont_Proportional_Column :: bAnyNonTransparentPixelsInColumn
 			(B > 32)
 		)
 		{
-			// nasty hack to get it working...
-			return Yes;
+// nasty hack to get it working...
+return Yes;
 		}
 		#endif
 
@@ -669,8 +669,8 @@ IndexedFont_Kerned_Column :: RenderChar_Clipped
 				// okay, now we have the surfaces, we can copy from one to the other,
 				// darkening pixels as we go
 				{
-					long fontimagePitchInShorts = (ddsdimage.lPitch/2); 
-					long backbufferPitchInShorts = (BackBufferPitch/2); 
+					long fontimagePitchInShorts = (ddsdimage.lPitch/4); 
+					long backbufferPitchInShorts = (BackBufferPitch/4); 
 
 					unsigned int* fontimageRowStartPtr =
 					(
@@ -790,8 +790,8 @@ IndexedFont_Kerned_Column :: RenderChar_Unclipped
 				// okay, now we have the surfaces, we can copy from one to the other,
 				// darkening pixels as we go
 				{
-					long fontimagePitchInShorts = (ddsdimage.lPitch/2); 
-					long backbufferPitchInShorts = (ddsdback.lPitch/2); 
+					long fontimagePitchInShorts = (ddsdimage.lPitch/4); 
+					long backbufferPitchInShorts = (ddsdback.lPitch/4); 
 
 					unsigned short* fontimageRowStartPtr =
 					(

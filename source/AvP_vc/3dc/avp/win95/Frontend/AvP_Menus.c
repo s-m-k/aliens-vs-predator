@@ -265,8 +265,8 @@ extern int AvP_MainMenus(void)
 
 	ResetFrameCounter();
 
- 	if (!LobbiedGame)	// Edmond
-		PlayIntroSequence();
+ 	/*if (!LobbiedGame)	// Edmond
+		PlayIntroSequence();*/
 	
 	if (VideoModeNotAvailable)
 	{	
@@ -309,6 +309,7 @@ extern int AvP_MainMenus(void)
 	while(AvPMenus.MenusState == MENUSSTATE_MAINMENUS)
 	{
 		CheckForWindowsMessages();
+		ClearScreenToBlack();
 		DrawMainMenusBackdrop();
 		ReadUserInput();
 		AvP_UpdateMenus();
