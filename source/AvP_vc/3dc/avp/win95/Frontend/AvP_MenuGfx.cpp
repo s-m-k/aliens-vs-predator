@@ -1742,7 +1742,7 @@ extern void ClearScreenToBlack(void)
 		{
 			unsigned int *destPtr = (unsigned int *)(ScreenBuffer + y*BackBufferPitch);
 
-			for (x=0; x<320; x++)
+			for (x=0; x<640; x++)
 			{
  				*destPtr++=0;
 			}
@@ -1825,7 +1825,7 @@ static void CalculateWidthsOfAAFont(void)
 			int blank = 1;
 			for (y=y1; y<y1+HUD_FONT_HEIGHT; y++)
 			{
-				unsigned short s = *(unsigned short *)(srcPtr + x*2 + y*ddsdimage.lPitch);
+				unsigned int s = *(unsigned int *)(srcPtr + x*4 + y*ddsdimage.lPitch);
 				if (s&DisplayPixelFormat.dwBBitMask == DisplayPixelFormat.dwBBitMask)
 				{
 					blank=0;
