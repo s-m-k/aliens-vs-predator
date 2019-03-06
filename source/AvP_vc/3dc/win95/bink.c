@@ -15,8 +15,16 @@ extern DDPIXELFORMAT DisplayPixelFormat;
 
 extern void DirectReadKeyboard(void);
 
+const unsigned int intermediateBuffer[640 * 480];
 
 static int BinkSurfaceType;
+
+void RenderBinkFrame(HBINK binkHandle, unsigned long additionalFlags) {
+	LockSurfaceAndGetBufferPointer();
+	BinkCopyToBuffer(binkHandle, (void*)intermediateBuffer, 640 * 4, 480, (640 - binkHandle->Width) / 2, (480 - binkHandle->Height) / 2, BinkSurfaceType | additionalFlags);
+	memcpy((void*)ScreenBuffer, (const void*)intermediateBuffer, 640 * 480 * sizeof(unsigned int));
+	UnlockSurface();
+}
 
 void PlayBinkedFMV(char *filenamePtr)
 {
@@ -63,8 +71,7 @@ static int NextBinkFrame(BINK *binkHandle)
 	/* unpack frame */
 	BinkDoFrame(binkHandle);
 
-	BinkCopyToBuffer(binkHandle,(void*)ScreenBuffer,640,480,(640-binkHandle->Width)/2,(480-binkHandle->Height)/2,BinkSurfaceType);
-
+	RenderBinkFrame(binkHandle, 0);
 	//BinkToBuffer(binkHandle,(640-binkHandle->Width)/2,(480-binkHandle->Height)/2,640*2,480,(void*)ScreenBuffer,GetBinkPixelFormat(&DisplayPixelFormat));
 
 	/* are we at the last frame yet? */
@@ -162,7 +169,7 @@ static int GetBinkPixelFormat(void)
 			}
 		}
 		else if (redShift == 8 && greenShift == 8 && blueShift == 8 && DisplayPixelFormat.dwAlphaBitDepth == 32) {
-			return BINKSURFACE32;
+			return BINKSURFACE8P;
 		} else
 		{
 			return -1;
@@ -192,8 +199,7 @@ extern int PlayMenuBackgroundBink(void)
 	if (!BinkWait(MenuBackground)&&IntroOutroMoviesAreActive) newframe=1;
 
 	if(newframe) BinkDoFrame(MenuBackground);
-
-	BinkCopyToBuffer(MenuBackground,(void*)ScreenBuffer,640 * 2,480,(640-MenuBackground->Width)/2,(480-MenuBackground->Height)/2,BinkSurfaceType|BINKSURFACECOPYALL);
+	RenderBinkFrame(MenuBackground, BINKSURFACECOPYALL);
 
 	/* next frame, please */								  
 	if(newframe)BinkNextFrame(MenuBackground);
