@@ -1744,7 +1744,7 @@ extern void ClearScreenToBlack(void)
 
 			for (x=0; x<640; x++)
 			{
- 				*destPtr++=0;
+ 				*destPtr++=255<<16;
 			}
 		}
 	}

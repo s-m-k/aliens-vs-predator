@@ -309,16 +309,11 @@ extern int AvP_MainMenus(void)
 	while(AvPMenus.MenusState == MENUSSTATE_MAINMENUS)
 	{
 		CheckForWindowsMessages();
-		ClearScreenToBlack();
 		DrawMainMenusBackdrop();
+
 		ReadUserInput();
 		AvP_UpdateMenus();
    //	BezierCurve();
-		/*for (int y = 0; y < 480; y++) {
-			for (int x = 0; x < 640; x++) {
-				RenderPixel(x, y, x < 320 && y > 240 ? 255 : 0, x >= 320 && y > 240 ? 255 : 0, y <= 240 ? 255 : 0);
-			}
-		}*/
 		
 		ShowMenuFrameRate();
 
@@ -4807,16 +4802,16 @@ extern void DrawMainMenusBackdrop(void)
 		unsigned int *screenPtr = (unsigned int*)ScreenBuffer;
 		int i;	  
 
-		i = ScreenDescriptorBlock.SDB_Width * 60 /2;
+		i = ScreenDescriptorBlock.SDB_Width * 60 /4;
 		do
 		{
 			*screenPtr++=0; 
 		}
 		while(--i);
 
-		screenPtr+=ScreenDescriptorBlock.SDB_Width * 360/2;
+		screenPtr+=ScreenDescriptorBlock.SDB_Width * 360/4;
 
-		i = ScreenDescriptorBlock.SDB_Width * 60 /2;
+		i = ScreenDescriptorBlock.SDB_Width * 60 /4;
 		do
 		{
 			*screenPtr++=0; 
